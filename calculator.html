@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Design</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="calculator">
+        <div class="display">0</div>
+        <div class="buttons">
+            <button class="button operator">AC</button>
+            <button class="button operator">+/-</button>
+            <button class="button operator">%</button>
+            <button class="button operator">/</button>
+
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button operator">*</button>
+
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button operator">-</button>
+
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button operator">+</button>
+
+            <button class="button zero">0</button>
+            <button class="button">.</button>
+            <button class="button operator equals">=</button>
+        </div>
+    </div>
+<style>
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    background-color: #333;
+    padding: 15px;
+}
+
+.display {
+    background-color: #222;
+    color: #fff;
+    font-size: 2.5em;
+    padding: 20px;
+    text-align: right;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden; /* To prevent numbers from spilling out */
+    white-space: nowrap; /* Keep numbers on one line */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, equal width */
+    gap: 10px; /* Space between buttons */
+}
+
+.button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #777;
+}
+
+.button.operator {
+    background-color: #2600ff; /* Orange for operators */
+}
+
+.button.operator:hover {
+    background-color: #2200ff;
+}
+
+.button.equals {
+    background-color: #0400ff; /* Orange for equals */
+}
+
+.button.equals:hover {
+    background-color: #1100ff;
+}
+
+.button.zero {
+    grid-column: span 2; /* Make the zero button span two columns */
+}
+</style>
+
+</body>
+</html>
